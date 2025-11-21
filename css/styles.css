@@ -1,1 +1,30 @@
 
+
+/* Basis */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background-color: #f7f7f7;
+}
+
+/* Layout */
+header,
+main,
+footer {
+  padding: 1rem;
+}
+
+header {
+  background: #696a6b9b;
+  color: #078cb1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+}
+
