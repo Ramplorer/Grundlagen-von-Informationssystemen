@@ -133,6 +133,7 @@ body.marco-hobby {
 .marco-card.marco-form input,
 .marco-card.marco-form textarea {
   width: 100%;
+  box-sizing: border-box;
   border: none;
   border-radius: 16px;
   padding: 0.85rem 1rem;
