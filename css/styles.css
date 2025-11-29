@@ -88,6 +88,26 @@ body.marco-hobby {
   gap: 1.5rem;
 }
 
+.marco-hero-background {
+  position: relative;
+  background-image: url('../img/marco/pexels-maxfrancis-2246476.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem;
+  border-radius: var(--card-radius);
+  margin: 0 -3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.marco-hero-background > .marco-card {
+  max-width: 920px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .marco-card {
   background: var(--marco-blue);
   color: #222;
