@@ -88,26 +88,6 @@ body.marco-hobby {
   gap: 1.5rem;
 }
 
-.marco-hero-background {
-  position: relative;
-  background-image: url('../img/marco/pexels-maxfrancis-2246476.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 2rem;
-  border-radius: var(--card-radius);
-  margin: 0 -3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.marco-hero-background > .marco-card {
-  max-width: 920px;
-  margin: 0 auto;
-  width: 100%;
-}
-
 .marco-card {
   background: var(--marco-blue);
   color: #222;
@@ -167,6 +147,7 @@ body.marco-hobby {
 .marco-card.marco-form input,
 .marco-card.marco-form textarea {
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
   border: none;
   border-radius: 16px;
@@ -175,6 +156,8 @@ body.marco-hobby {
   color: var(--color-ink);
   background: rgba(255, 255, 255, 0.92);
   box-shadow: inset 0 0 0 1px rgba(0, 25, 84, 0.08);
+  margin: 0 auto;
+  display: block;
 }
 
 .marco-card.marco-form textarea {
@@ -200,7 +183,7 @@ body.marco-hobby {
 }
 
 .primary-button {
-  background: #fff;
+  background: #222;
   color: var(--marco-blue);
   box-shadow: 0 10px 25px rgba(0, 27, 92, 0.35);
 }
@@ -213,8 +196,8 @@ body.marco-hobby {
 
 .secondary-button {
   background: var(--marco-blue);
-  color: #fff;
-  border: 2px solid #fff;
+  color: #222;
+  border: 2px solid #222;
   margin: 0 auto;
   width: 140px;
 }
