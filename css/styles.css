@@ -3,14 +3,16 @@
 /* Basis */
 html {
   font-size: 16px;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
   --color-ink: #101828;
   --color-muted: #475467;
-  --marco-blue: #0047ab;
+  --marco-blue: #F4F4F4;
   --marco-blue-dark: #003b8c;
-  --marco-silver: #bdbdbd;
+  --marco-silver: #F7F7F4;
   --card-radius: 32px;
 }
 
@@ -19,6 +21,8 @@ body {
   line-height: 1.5;
   color: #222;
   background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -31,15 +35,22 @@ footer {
 }
 
 header {
-  background: #696a6b9b;
-  color: #078cb1;
+  background: #F7F7F4;
+  color: #222;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 1rem;
+  padding: 0.8rem 1rem;
   position: sticky;
   top: 0;
   z-index: 10;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #222;
 }
 
 nav ul {
@@ -51,7 +62,7 @@ nav ul {
 }
 
 nav a {
-  color: #fff;
+  color: #222;
   text-decoration: none;
   font-weight: 600;
 }
@@ -79,7 +90,7 @@ body.marco-hobby {
 
 .marco-card {
   background: var(--marco-blue);
-  color: #f8fbff;
+  color: #222;
   border-radius: var(--card-radius);
   padding: 2rem;
   box-shadow: 0 20px 45px rgba(0, 27, 92, 0.25);
@@ -92,7 +103,7 @@ body.marco-hobby {
 }
 
 .marco-card p {
-  color: #e3edff;
+  color: #222;
   margin-bottom: 1rem;
 }
 
@@ -110,7 +121,7 @@ body.marco-hobby {
   letter-spacing: 0.25rem;
   text-transform: uppercase;
   font-size: 0.75rem;
-  color: #b5cdfc;
+  color: #222;
   margin-bottom: 0.5rem;
 }
 
@@ -130,12 +141,13 @@ body.marco-hobby {
 
 .marco-card.marco-form label {
   font-weight: 600;
-  color: #fefefe;
+  color: #222;
 }
 
 .marco-card.marco-form input,
 .marco-card.marco-form textarea {
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
   border: none;
   border-radius: 16px;
@@ -144,6 +156,8 @@ body.marco-hobby {
   color: var(--color-ink);
   background: rgba(255, 255, 255, 0.92);
   box-shadow: inset 0 0 0 1px rgba(0, 25, 84, 0.08);
+  margin: 0 auto;
+  display: block;
 }
 
 .marco-card.marco-form textarea {
@@ -169,7 +183,7 @@ body.marco-hobby {
 }
 
 .primary-button {
-  background: #fff;
+  background: #222;
   color: var(--marco-blue);
   box-shadow: 0 10px 25px rgba(0, 27, 92, 0.35);
 }
@@ -182,8 +196,8 @@ body.marco-hobby {
 
 .secondary-button {
   background: var(--marco-blue);
-  color: #fff;
-  border: 2px solid #fff;
+  color: #222;
+  border: 2px solid #222;
   margin: 0 auto;
   width: 140px;
 }
