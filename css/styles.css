@@ -73,6 +73,24 @@ nav a:hover,
 nav a:focus-visible {
   text-decoration: underline;
 }
+
+/* Footer */
+footer {
+  background: #F7F7F4;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #222;
+}
+
 /* Hauptseite */
 
 .Landing-page {
@@ -254,6 +272,11 @@ body.marco-hobby {
 /* Marco – Breakpoint */
 @media (max-width: 640px) {
   header {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  footer {
     flex-direction: column;
     gap: 0.75rem;
   }
