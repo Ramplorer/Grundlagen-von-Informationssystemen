@@ -14,6 +14,7 @@ html {
   --marco-blue-dark: #003b8c;
   --marco-silver: #F7F7F4;
   --lara-blue-dark: #003b8c;
+  --lara-blue: #f4f4f4;
   --lara-silver: #bdbdbd;
   --card-radius: 32px;
 }
@@ -399,7 +400,7 @@ body.lara-hobby {
 }
 
 .lara-card {
-  background: var(--marco-blue);
+  background: var(--lara-blue);
   color: #222;
   border-radius: var(--card-radius);
   padding: 2rem;
