@@ -76,6 +76,11 @@ nav a:focus-visible {
 
 /* Marco – Unterseite */
 
+
+
+
+
+
 body.marco-hobby {
   background-color: var(--marco-silver);
   color: var(--marco-blue-dark);
@@ -85,6 +90,20 @@ body.marco-hobby {
   max-width: 920px;
   margin: 2rem auto 4rem;
   padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+/* Einfügen des Bildes im hintergrund */
+.background-Marco {
+  background-image: url('../img/marco/pexels-maxfrancis-2246476.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  min-height: 100vh;
+  padding: 2rem;
+  border-radius: var(--card-radius);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
