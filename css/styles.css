@@ -288,6 +288,49 @@ body.marco-hobby {
 
 /*Lara Unterseite*/
 
+body.lara-hobby {
+  background-color: var(--lara-silver);
+  color: var(--lara-blue-dark);
+}
 .lara-main {
+    max-width: 920px;
+  margin: 2rem auto 4rem;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 
+/* Einfügen des Bildes im hintergrund */
+.background-lara {
+  background-image: url('../img/lara/20250813_115349.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  min-height: 100vh;
+  padding: 2rem;
+  border-radius: var(--card-radius);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.lara-card {
+  background: var(--marco-blue);
+  color: #222;
+  border-radius: var(--card-radius);
+  padding: 2rem;
+  box-shadow: 0 20px 45px rgba(0, 27, 92, 0.25);
+}
+
+.lara-card h1,
+.lara-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.lara-card p {
+  color: #222;
+  margin-bottom: 1rem;
 }
