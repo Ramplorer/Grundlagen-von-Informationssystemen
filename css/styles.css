@@ -154,6 +154,18 @@ footer p {
   font-weight: 700;
 }
 
+/* Videos Marco Lara */
+.landing-column video {
+  width: 100%;
+  height: 300px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 27, 92, 0.2);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: block;
+  object-fit: cover;
+}
+
 .image-wall {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -173,6 +185,7 @@ footer p {
 }
 
 
+
 @media (max-width: 1024px) {
   .landing-container {
     grid-template-columns: 1fr;
@@ -188,7 +201,7 @@ footer p {
     width: 100%;
   }
 }
-
+/* Verlinkung zu den Hobbys */
 .Button-hobby {
   position: relative;
   display: inline-block;
