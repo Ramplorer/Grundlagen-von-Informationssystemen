@@ -106,7 +106,7 @@ footer p {
   gap: 2rem;
   max-width: 1400px;
   margin: 0 auto;
-  align-items: start;
+  align-items: stretch;
 }
 
 .landing-column {
@@ -125,6 +125,9 @@ footer p {
   padding: 1.5rem;
   border-radius: var(--card-radius);
   box-shadow: 0 10px 30px rgba(0, 27, 92, 0.15);
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
 }
 
 .steckbrief h3 {
@@ -137,6 +140,7 @@ footer p {
   list-style: none;
   padding: 0;
   margin: 0;
+  flex-grow: 1;
 }
 
 .steckbrief li {
@@ -155,6 +159,8 @@ footer p {
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   width: 300px;
+  align-items: start;
+  position: relative;
 }
 
 .image-wall img {
@@ -182,6 +188,35 @@ footer p {
   .image-wall img {
     width: 100%;
   }
+}
+
+.Button-hobby {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.Button-hobby img {
+  width: 100%;
+  height: 300px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 27, 92, 0.2);
+  display: block;
+}
+
+.Button-hobby .secondary-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  margin: 0;
+}
+
+.Button-hobby .secondary-button:hover,
+.Button-hobby .secondary-button:focus-visible {
+  transform: translate(-50%, calc(-50% - 1px));
 }
 
 
