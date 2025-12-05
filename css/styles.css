@@ -172,6 +172,14 @@ footer p {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.video{
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 27, 92, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
 
 @media (max-width: 1024px) {
