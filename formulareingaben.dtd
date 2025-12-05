@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Eingabe Allgemein
+-->
+
+<!ELEMENT formulareingaben (marcoEingaben*, laraEingaben*)>
+<!ATTLIST formulareingaben
+    version CDATA #IMPLIED
+>
+
+<!ELEMENT marcoEingaben (name, ticker, sektor?, investmentThese?, chance?, risiko?, upside?, datum?)>
+<!ATTLIST marcoEingaben
+    id ID #REQUIRED
+>
+
+<!ELEMENT laraEingaben (name, buch1, autor1, warum1, buch2, autor2, warum2, buch3, autor3, warum3, datum?)>
+<!ATTLIST laraEingaben
+    id ID #REQUIRED
+>
+<!-- Eingaben Marco -->
+
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name
+>
+
+<!ELEMENT ticker (#PCDATA)>
+<!ATTLIST ticker
+>
+
+<!ELEMENT sektor (#PCDATA)>
+<!ATTLIST sektor
+>
+
+<!ELEMENT investmentThese (#PCDATA)>
+<!ATTLIST investmentThese
+>
+
+<!ELEMENT chance (#PCDATA)>
+<!ATTLIST chance
+>
+
+<!ELEMENT risiko (#PCDATA)>
+<!ATTLIST risiko
+>
+
+<!ELEMENT upside (#PCDATA)>
+<!ATTLIST upside
+>
+
+<!-- Eingaben Lara -->
+
+<!ELEMENT buch1 (#PCDATA)>
+<!ATTLIST buch1
+>
+
+<!ELEMENT autor1 (#PCDATA)>
+<!ATTLIST autor1
+>
+
+<!ELEMENT warum1 (#PCDATA)>
+<!ATTLIST warum1
+>
+
+<!ELEMENT buch2 (#PCDATA)>
+<!ATTLIST buch2
+>
+
+<!ELEMENT autor2 (#PCDATA)>
+<!ATTLIST autor2
+>
+
+<!ELEMENT warum2 (#PCDATA)>
+<!ATTLIST warum2
+>
+
+<!ELEMENT buch3 (#PCDATA)>
+<!ATTLIST buch3
+>
+
+<!ELEMENT autor3 (#PCDATA)>
+<!ATTLIST autor3
+>
+
+<!ELEMENT warum3 (#PCDATA)>
+<!ATTLIST warum3
+>
+
+<!ELEMENT datum (#PCDATA)>
+<!ATTLIST datum
+>
+<!-- Ende Eingaben -->

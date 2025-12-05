@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE formulareingaben SYSTEM "formulareingaben.dtd">
+<formulareingaben version="1.0">
+  
+  <!-- Eingabe 1: Marco's Stock Picking Formular -->
+  <marcoEingaben id="marco-001">
+    <name>Marco Muster</name>
+    <ticker>NVDA</ticker>
+    <sektor>Halbleiter</sektor>
+    <investmentThese>NVIDIA ist führend im Bereich KI-Chips und profitiert massiv vom KI-Boom. Die Nachfrage nach GPU-Lösungen für Machine Learning und Data Centers wächst exponentiell.</investmentThese>
+    <chance>Der KI-Megatrend wird noch Jahre anhalten. Neue Anwendungen wie autonomes Fahren, Robotik und Edge-Computing werden die Nachfrage weiter steigern. Zudem expandiert NVIDIA in neue Bereiche wie Cloud-Services.</chance>
+    <risiko>Hohe Bewertung macht die Aktie anfällig für Korrekturen. Geopolitische Spannungen könnten Exporte nach China einschränken. Konkurrenz von AMD und eigenen Kunden (wie Google, Meta) die eigene Chips entwickeln.</risiko>
+    <upside>Ich erwarte über die nächsten 2-3 Jahre ein Upside-Potenzial von 40-60%, basierend auf weiterem Wachstum in den Data Center und Automotive-Bereichen.</upside>
+    <datum>2025-01-15</datum>
+  </marcoEingaben>
+
+  <!-- Eingabe 2: Marco's Stock Picking Formular -->
+  <marcoEingaben id="marco-002">
+    <name>Thomas Schmidt</name>
+    <ticker>TSLA</ticker>
+    <sektor>Elektrofahrzeuge</sektor>
+    <investmentThese>Tesla ist nicht nur ein Autohersteller, sondern ein Technologieunternehmen mit Fokus auf nachhaltige Energie. Die Marktposition im E-Auto-Segment ist unangefochten.</investmentThese>
+    <chance>Autonomes Fahren könnte den gesamten Markt disruptieren. Energy Storage und Solar-Geschäft haben enormes Potenzial. Expansion in neue Märkte wie Indien.</chance>
+    <risiko>Viel hängt von der Persönlichkeit des CEOs ab. Hohe Bewertung. Zunehmende Konkurrenz von etablierten Autoherstellern. Qualitätsprobleme könnten Reputation schaden.</risiko>
+    <upside>Bei erfolgreicher Einführung von FSD (Full Self-Driving) sehe ich ein Upside von 80-100% über 3-5 Jahre.</upside>
+    <datum>2025-01-20</datum>
+  </marcoEingaben>
+
+  <!-- Eingabe 3: Lara's Bücher Formular -->
+  <laraEingaben id="lara-001">
+    <name>Lara Muster</name>
+    <buch1>The Secret History</buch1>
+    <autor1>Donna Tartt</autor1>
+    <warum1>Die Spannung, die das Buch mit sich bringt, ist atemberaubend. Die Charakterentwicklung ist meisterhaft und die Atmosphäre an der Universität fesselt einen von der ersten Seite an.</warum1>
+    <buch2>Die Verwandlung</buch2>
+    <autor2>Franz Kafka</autor2>
+    <warum2>Da es ein gesellschaftskritisches Buch ist, das auf eine einzigartige Weise die Absurdität des modernen Lebens darstellt. Kafkas Schreibstil ist unvergleichlich.</warum2>
+    <buch3>Die Tribute von Panem</buch3>
+    <autor3>Suzanne Collins</autor3>
+    <warum3>Die starken Charaktere, besonders Katniss, sind inspirierend. Die Dystopie ist packend erzählt und regt zum Nachdenken über Macht und Widerstand an.</warum3>
+    <datum>2025-01-18</datum>
+  </laraEingaben>
+
+</formulareingaben>
+
