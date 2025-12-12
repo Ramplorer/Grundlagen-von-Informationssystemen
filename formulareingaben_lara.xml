@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE formulareingaben SYSTEM "formulareingaben.dtd">
+<formulareingaben version="1.0">
+
+    <!-- Eingabe 3: Lara's Bücher Formular -->
+  <laraEingaben id="lara-001">
+    <name>Lara Muster</name>
+    <buch1>The Secret History</buch1>
+    <autor1>Donna Tartt</autor1>
+    <warum1>Die Spannung, die das Buch mit sich bringt, ist atemberaubend. Die Charakterentwicklung ist meisterhaft und die Atmosphäre an der Universität fesselt einen von der ersten Seite an.</warum1>
+    <buch2>Die Verwandlung</buch2>
+    <autor2>Franz Kafka</autor2>
+    <warum2>Da es ein gesellschaftskritisches Buch ist, das auf eine einzigartige Weise die Absurdität des modernen Lebens darstellt. Kafkas Schreibstil ist unvergleichlich.</warum2>
+    <buch3>Die Tribute von Panem</buch3>
+    <autor3>Suzanne Collins</autor3>
+    <warum3>Die starken Charaktere, besonders Katniss, sind inspirierend. Die Dystopie ist packend erzählt und regt zum Nachdenken über Macht und Widerstand an.</warum3>
+    <datum>2025-01-18</datum>
+  </laraEingaben>
+
+</formulareingaben>
+

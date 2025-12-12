@@ -1,0 +1,2 @@
+Die Eingaben auf unserer Webseite werden separat für die unterseiten von Marco und Laura Gespeichert. 
+Wie die Dateien in der xml datei gespeichert werden sollen wird in der dtd datei festgelegt.
