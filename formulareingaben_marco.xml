@@ -4,7 +4,7 @@
   
   <!-- Eingabe 1: Marco's Stock Picking Formular -->
   <marcoEingaben id="marco-001">
-    <name>Marco Muster</name>
+    <name>Mario Beck</name>
     <ticker>NVDA</ticker>
     <sektor>Halbleiter</sektor>
     <investmentThese>NVIDIA ist führend im Bereich KI-Chips und profitiert massiv vom KI-Boom. Die Nachfrage nach GPU-Lösungen für Machine Learning und Data Centers wächst exponentiell.</investmentThese>

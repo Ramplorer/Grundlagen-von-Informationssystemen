@@ -1,0 +1,1 @@
+TIERNAME=`echo "$QUERY_STRING" | sed -n 's/^.*name=\([^&]*\).*$/\1/p' | sed "s/%20/ /g"`
