@@ -58,8 +58,8 @@ html_escape() {
 # CSV-Escape Funktion (für Anführungszeichen und Zeilenumbrüche)
 csv_escape() {
     local text="$1"
-    # Leere Eingaben behandeln
-    [ -z "$text" ] && echo "" && return
+    # Leere Eingaben als leere Anführungszeichen behandeln
+    [ -z "$text" ] && echo "\"\"" && return
     # Anführungszeichen verdoppeln und in Anführungszeichen einschließen
     text="${text//\"/\"\"}"
     echo "\"$text\""
@@ -113,8 +113,8 @@ if [ -n "${VALUES[nameL]}" ]; then
         error_exit "Name ist erforderlich."
     fi
     
-    # CSV-Zeile für Lara erstellen (mit CSV-Escaping)
-    CSV_LINE="$TYP,$(csv_escape "$NAME"),$(csv_escape "${VALUES[Buch1]}"),$(csv_escape "${VALUES[Autor1]}"),$(csv_escape "${VALUES[Warum1]}"),$(csv_escape "${VALUES[Buch2]}"),$(csv_escape "${VALUES[Autor2]}"),$(csv_escape "${VALUES[Warum2]}"),$(csv_escape "${VALUES[Buch3]}"),$(csv_escape "${VALUES[Autor3]}"),$(csv_escape "${VALUES[Warum3]}"),,,,,$(csv_escape "$DATUM")"
+    # CSV-Zeile für Lara erstellen (mit CSV-Escaping, leere Felder für Marco-Spalten)
+    CSV_LINE="$TYP,$(csv_escape "$NAME"),$(csv_escape "${VALUES[Buch1]}"),$(csv_escape "${VALUES[Autor1]}"),$(csv_escape "${VALUES[Warum1]}"),$(csv_escape "${VALUES[Buch2]}"),$(csv_escape "${VALUES[Autor2]}"),$(csv_escape "${VALUES[Warum2]}"),$(csv_escape "${VALUES[Buch3]}"),$(csv_escape "${VALUES[Autor3]}"),$(csv_escape "${VALUES[Warum3]}"),$(csv_escape ""),$(csv_escape ""),$(csv_escape ""),$(csv_escape ""),$(csv_escape ""),$(csv_escape "$DATUM")"
     
     # XML-Eintrag für Lara erstellen
     XML_ENTRY="  <eingabe>
@@ -140,8 +140,8 @@ elif [ -n "${VALUES[nameM]}" ]; then
         error_exit "Name ist erforderlich."
     fi
     
-    # CSV-Zeile für Marco erstellen (mit CSV-Escaping)
-    CSV_LINE="$TYP,$(csv_escape "$NAME"),,,,,,,,$(csv_escape "${VALUES[ticker]}"),$(csv_escape "${VALUES[sektor]}"),$(csv_escape "${VALUES[investmentThese]}"),$(csv_escape "${VALUES[chance]}"),$(csv_escape "${VALUES[risiko]}"),$(csv_escape "${VALUES[upside]}"),$(csv_escape "$DATUM")"
+    # CSV-Zeile für Marco erstellen (mit CSV-Escaping, leere Felder für Lara-Spalten)
+    CSV_LINE="$TYP,$(csv_escape "$NAME"),$(csv_escape ""),$(csv_escape ""),$(csv_escape ""),$(csv_escape ""),$(csv_escape ""),$(csv_escape ""),$(csv_escape ""),$(csv_escape ""),$(csv_escape ""),$(csv_escape "${VALUES[ticker]}"),$(csv_escape "${VALUES[sektor]}"),$(csv_escape "${VALUES[investmentThese]}"),$(csv_escape "${VALUES[chance]}"),$(csv_escape "${VALUES[risiko]}"),$(csv_escape "${VALUES[upside]}"),$(csv_escape "$DATUM")"
     
     # XML-Eintrag für Marco erstellen
     XML_ENTRY="  <eingabe>

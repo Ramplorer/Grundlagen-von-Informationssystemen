@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE formulareingaben SYSTEM "formulareingaben.dtd">
 <formulareingaben version="1.0">
-  
+  <eingabe>
+    <nameL>Lara Muster</nameL>
+    <buch1>The Secret History</buch1>
+    <autor1>Donna Tartt</autor1>
+    <warum1>Die Spannung und die komplexen Charaktere</warum1>
+    <buch2>Die Verwandlung</buch2>
+    <autor2>Franz Kafka</autor2>
+    <warum2>Ein gesellschaftskritisches Meisterwerk</warum2>
+    <buch3>Die Tribute von Panem</buch3>
+    <autor3>Suzanne Collins</autor3>
+    <warum3>Die starken Charaktere und die packende Handlung</warum3>
+    <datum>2025-01-15 14:30:00</datum>
+  </eingabe>
+  <eingabe>
+    <nameM>Marco Arnold</nameM>
+    <ticker>NVDA</ticker>
+    <sektor>Halbleiter</sektor>
+    <investmentThese>KI-Revolution und starke Marktposition</investmentThese>
+    <chance>KI-Boom, autonomes Fahren, Datenzentren</chance>
+    <risiko>Regulierung, Konkurrenz</risiko>
+    <upside>+50% in 12 Monaten</upside>
+    <datum>2025-01-16 10:15:00</datum>
+  </eingabe>
+  <eingabe>
+    <nameL>Anna Schmidt</nameL>
+    <buch1>1984</buch1>
+    <autor1>George Orwell</autor1>
+    <warum1>Zeitlose Warnung vor Totalitarismus</warum1>
+    <buch2>Der Herr der Ringe</buch2>
+    <autor2>J.R.R. Tolkien</autor2>
+    <warum2>Epische Fantasy-Welt</warum2>
+    <buch3>Harry Potter</buch3>
+    <autor3>J.K. Rowling</autor3>
+    <warum3>Magische Welt voller Abenteuer</warum3>
+    <datum>2025-01-17 16:45:00</datum>
+  </eingabe>
+  <eingabe>
+    <nameM>Thomas Müller</nameM>
+    <ticker>TSLA</ticker>
+    <sektor>Elektrofahrzeuge</sektor>
+    <investmentThese>Führungsposition in E-Mobilität und erneuerbaren Energien</investmentThese>
+    <chance>Energiewende, autonomes Fahren</chance>
+    <risiko>Volatilität, Konkurrenz</risiko>
+    <upside>+30% in 6 Monaten</upside>
+    <datum>2025-01-18 09:20:00</datum>
+  </eingabe>
 </formulareingaben>
