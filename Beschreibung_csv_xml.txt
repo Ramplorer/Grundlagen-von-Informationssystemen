@@ -1,3 +1,0 @@
-Die Eingaben auf unserer Webseite werden separat für die unterseiten von Marco und Lara Gespeichert. 
-Wie die Dateien in der xml datei gespeichert werden sollen wird in der dtd datei festgelegt.
-Im csv werden die daten so gespeichert das sie einfach in eine tabelle überführt werden können um sie übersichtlich darzustellen.
