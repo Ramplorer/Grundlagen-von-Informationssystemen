@@ -7,9 +7,10 @@
 # Pfade relativ zum Skript-Verzeichnis
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 BASE_DIR="$(dirname "$SCRIPT_DIR")"
-CSV_FILE="$BASE_DIR/formulareingaben.csv"
-XML_FILE="$BASE_DIR/formulareingaben.xml"
-DTD_FILE="$BASE_DIR/formulareingaben.dtd"
+DATA_DIR="$BASE_DIR/data"
+CSV_FILE="$DATA_DIR/formulareingaben.csv"
+XML_FILE="$DATA_DIR/formulareingaben.xml"
+DTD_FILE="$DATA_DIR/formulareingaben.dtd"
 
 # Fehler-Funktion
 error_exit() {
@@ -26,6 +27,11 @@ error_exit() {
 # Pfad-Validierung
 if [ ! -d "$BASE_DIR" ]; then
     error_exit "Basis-Verzeichnis nicht gefunden."
+fi
+
+# Data-Verzeichnis erstellen, falls es nicht existiert
+if [ ! -d "$DATA_DIR" ]; then
+    mkdir -p "$DATA_DIR" || error_exit "Konnte Data-Verzeichnis nicht erstellen."
 fi
 
 # Prüfe ob CSV-Datei beschreibbar ist (oder erstellt werden kann)
@@ -50,9 +56,12 @@ url_decode() {
 # HTML-Escape Funktion
 html_escape() {
     local text="$1"
-    # Leere Eingaben behandeln
-    [ -z "$text" ] && return
-    echo "$text" | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g'
+    # Leere Eingaben als leerer String zurückgeben
+    if [ -z "$text" ]; then
+        echo ""
+        return
+    fi
+    echo "$text" | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g; s/'"'"'/\&apos;/g'
 }
 
 # CSV-Escape Funktion (für Anführungszeichen und Zeilenumbrüche)
@@ -94,13 +103,23 @@ IFS='&' read -ra PARAMS <<< "$QUERY_STRING"
 declare -A VALUES
 
 for param in "${PARAMS[@]}"; do
-    IFS='=' read -r key value <<< "$param"
-    # URL-decodieren und sanitizen
-    key=$(url_decode "$key")
-    value=$(url_decode "$value")
-    key=$(sanitize_input "$key")
-    value=$(sanitize_input "$value")
-    VALUES["$key"]="$value"
+    # Leere Parameter überspringen
+    [ -z "$param" ] && continue
+    # Parameter in Key und Value aufteilen
+    if [[ "$param" == *"="* ]]; then
+        IFS='=' read -r key value <<< "$param"
+        # URL-decodieren und sanitizen
+        key=$(url_decode "$key")
+        value=$(url_decode "$value")
+        key=$(sanitize_input "$key")
+        value=$(sanitize_input "$value")
+        VALUES["$key"]="$value"
+    else
+        # Parameter ohne Wert (nur Key)
+        key=$(url_decode "$param")
+        key=$(sanitize_input "$key")
+        VALUES["$key"]=""
+    fi
 done
 
 # Formular-Typ erkennen
@@ -160,6 +179,10 @@ else
 fi
 
 # CSV-Zeile zur Datei hinzufügen (mit Fehlerbehandlung)
+# Header hinzufügen, falls Datei neu erstellt wird
+if [ ! -f "$CSV_FILE" ] || [ ! -s "$CSV_FILE" ]; then
+    echo "Typ,Name,Buch1,Autor1,Warum1,Buch2,Autor2,Warum2,Buch3,Autor3,Warum3,Ticker,Sektor,InvestmentThese,Chance,Risiko,Upside,Datum" > "$CSV_FILE" || error_exit "Fehler beim Erstellen der CSV-Datei. Bitte Berechtigungen prüfen."
+fi
 if ! echo "$CSV_LINE" >> "$CSV_FILE" 2>/dev/null; then
     error_exit "Fehler beim Schreiben in die CSV-Datei. Bitte Berechtigungen prüfen."
 fi
@@ -184,6 +207,10 @@ $XML_ENTRY
 </formulareingaben>
 EOF
         error_exit "Fehler beim Erstellen der XML-Datei. Bitte Berechtigungen prüfen."
+    fi
+    # DTD-Datei in data-Verzeichnis kopieren, falls sie dort noch nicht existiert
+    if [ ! -f "$DTD_FILE" ] && [ -f "$BASE_DIR/formulareingaben.dtd" ]; then
+        cp "$BASE_DIR/formulareingaben.dtd" "$DTD_FILE" 2>/dev/null || true
     fi
 fi
 
